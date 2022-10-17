@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engine": {
+    "node": "16.x"
+  },
   "scripts": {
-    "start": "nodemon src/server.ts"
+    "start": "node src/server.ts",
+    "dev": "nodemon src/server.ts"
   },
   "author": "",
   "license": "ISC",

@@ -1,14 +1,15 @@
 const express = require('express')
-const PORT = 8080
-
+require('dotenv').config();
 
 const app = express();
+
+const PORT = process.env.PORT_BACK || 9002;
 
 app.get('/', (_req, res) => {
   res.status(200).json({
     message: 'API de motores de veículos elétricos',
-  })
-})
+  });
+});
 
 
 app.listen(PORT, () => console.log(`
@@ -16,4 +17,4 @@ app.listen(PORT, () => console.log(`
   Server running on port ${PORT}
   CTRL+C to stop server......
   ***************************
-`))
+`));
