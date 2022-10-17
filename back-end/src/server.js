@@ -2,7 +2,7 @@ const express = require('express');
 const route = require('./routes/router');
 require('dotenv').config();
 
-const PORT = process.env.PORT_BACK || 9002;
+const PORT = process.env.PORT || 9002;
 
 const app = express();
 app.use(express.json());
