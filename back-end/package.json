@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "engines": {
     "node": "16.x"
   },
@@ -15,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "eslint-config-trybe-backend": "1.0.4",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^6.6.5",
