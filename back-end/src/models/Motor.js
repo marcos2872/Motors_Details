@@ -34,9 +34,4 @@ const motorSchema = new mongoose.Schema({
   
 });
 
-// const newMotor = async (obj) => {
-//   const response = await mongoose.model('Motor', motorSchema).create(obj);
-//   return response;
-// };
-
 module.exports = mongoose.model('Motor', motorSchema);
