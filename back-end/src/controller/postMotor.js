@@ -1,8 +1,8 @@
-const newMotor = require('../models/postMotor');
+const Motor = require('../models/Motor');
 
 const inserMotor = async (req, res) => {
   const obj = req.body;
-  const response = await newMotor(obj);
+  const response = await Motor.create(obj);
 
   res.status(200).json(response);
 };
