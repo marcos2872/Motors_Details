@@ -31,7 +31,7 @@ const storageTypes = {
       }),
       bucket: 'motors-api-images',
       contentType: multerS3.AUTO_CONTENT_TYPE,
-      acl: 'public-read',
+      acl: process.env.AWS_ACL,
       key: (_req, file, cb) => {
         crypto.randomBytes(16, (err, hash) => {
           if (err) cb(err);
