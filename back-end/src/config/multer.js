@@ -23,10 +23,10 @@ const storageTypes = {
 }),
     'aws-s3': multerS3({
       s3: new S3Client({
-        region: process.env.AWS_DEFAULT_REGION,
+        region: process.env.AWS_DEFAULT_REGION_DEV,
         credentials: {
-          accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+          accessKeyId: process.env.AWS_ACCESS_KEY_ID_DEV,
+          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY_DEV,
         },
       }),
       bucket: 'motors-api-images',
