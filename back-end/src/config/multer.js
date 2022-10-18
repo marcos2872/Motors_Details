@@ -47,7 +47,7 @@ const storageTypes = {
 
 module.exports = {
   dest: path.resolve(__dirname, '..', '..', 'temp', 'uploads'),
-  storage: storageTypes['aws-s3'],
+  storage: storageTypes[process.env.STORAGE],
   limits: {
     fileSize: 8 * 1024 * 1024,
   },
