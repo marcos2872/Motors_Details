@@ -30,6 +30,7 @@ const motorSchema = new mongoose.Schema({
   'parallel-wire': (type.n),
   'wire-length': (type.s),
   images: (type.a),
+  video: (type.s),
   date: (type.d),
   
 });
