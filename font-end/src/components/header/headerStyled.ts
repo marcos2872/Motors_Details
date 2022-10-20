@@ -6,9 +6,9 @@ const Head = styled.head`
   align-items: center;
   min-width: 100vh;
   height: 73px;
-  padding-left: 4vh;
-  padding-right: 4vh;
-  gap: 145px;
+  padding-left: 2%;
+  padding-right: 2.5%;
+  gap: 20%;
 `;
 
 const Logo = styled.input`
@@ -20,11 +20,10 @@ const Logo = styled.input`
 
 const Input = styled.input`
   background: #efefef;
-  width: 926px;
+  width: 60%;
   height: 33px;
   border-radius: 7px;
-  border: #efefef;
-  position: relative;
+  border: none;
   padding-left: 1%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `;
