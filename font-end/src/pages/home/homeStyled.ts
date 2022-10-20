@@ -6,13 +6,11 @@ const Body = styled.body`
   flex-direction: column;
   justify-items: center;
   min-height: 100vh;
-  min-width: 100vh;
   border: 1px solid red;
 `;
 
 const SectionTitle = styled.section`
   background-color: transparent;
-  min-width: 100vh;
   height: auto;
   align-self: center;
   text-align: center;

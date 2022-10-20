@@ -4,23 +4,21 @@ const Head = styled.head`
   background-color: #e5de97;
   display: flex;
   align-items: center;
-  min-width: 100vh;
   height: 73px;
-  padding-left: 2%;
-  padding-right: 2.5%;
-  gap: 20%;
+  gap: 10%;
 `;
 
 const Logo = styled.input`
   background-color: transparent;
   width: 50px;
   height: 50px;
+  margin-left: 2%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `;
 
 const Input = styled.input`
   background: #efefef;
-  width: 60%;
+  width: 70%;
   height: 33px;
   border-radius: 7px;
   border: none;
@@ -44,6 +42,7 @@ const Menu = styled.input`
   background-color: transparent;
   width: 39px;
   height: 30px;
+  margin-right: 2.5%;
 `;
 
 export { Head, Logo, Input, IconBusca, Menu };

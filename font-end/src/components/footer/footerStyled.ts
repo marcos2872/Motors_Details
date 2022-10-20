@@ -4,7 +4,6 @@ const SectioFooter = styled.footer`
   background-color: #d9d9d9;
   display: flex;
   align-items: center;
-  min-width: 100vh;
   height: 50px;
   bottom: 0;
   justify-content: space-between;
