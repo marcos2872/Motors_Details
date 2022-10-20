@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
 
-const Body = styled.body`
+const Body = styled.div`
   background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-items: center;
   min-height: 100vh;
-  border: 1px solid red;
 `;
 
 const SectionTitle = styled.section`

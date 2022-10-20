@@ -6,7 +6,7 @@ function Cards() {
   return (
     <CardsContainer>
       {motors.map((motor) => (
-        <Card>
+        <Card key={Math.random()}>
           <Image type="image" src={motor.images[0].url} />
           <Text>{motor.model}</Text>
         </Card>
