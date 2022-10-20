@@ -6,23 +6,54 @@ const Body = styled.div`
   flex-direction: column;
   justify-items: center;
   min-height: 100vh;
+  gap: 1.5rem;
 `;
 
-const SectionTitle = styled.section`
+const Contents = styled.section`
   background-color: transparent;
-  height: auto;
-  align-self: center;
-  text-align: center;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid green;
 `;
 
-const Title = styled.h1`
+const MotorDetails = styled.section`
+  background-color: transparent;
+  width: 30%;
+  min-width: 300px;
+  padding: 1rem;
+  padding-top: 2rem;
+  gap: 1rem;
+`;
+
+const ImageBravia = styled.img`
+  background-color: transparent;
+  width: 90%;
+  border-radius: 10px;
+`;
+
+const ImageB = styled.section`
+  background-color: transparent;
+  width: 60%;
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+`;
+
+const Text = styled.p`
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 1.25rem;
   line-height: 48px;
 `;
 
-export { Body, Title, SectionTitle };
+const ImagesMotor = styled.section`
+  background-color: transparent;
+`;
+
+const ImageM = styled.img`
+  width: 200px;
+`;
+
+export { Body, Contents, MotorDetails, Text, ImageB, ImageBravia, ImagesMotor, ImageM };
