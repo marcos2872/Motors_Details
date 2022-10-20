@@ -10,6 +10,7 @@ const SectioFooter = styled.footer`
   justify-content: space-between;
   padding-left: 2%;
   padding-right: 5%;
+  margin-top: 2%;
 `;
 
 const DivIcons = styled.div`

@@ -4,7 +4,10 @@ const Body = styled.body`
   background-color: transparent;
   display: flex;
   flex-direction: column;
+  justify-items: center;
   min-height: 100vh;
+  min-width: 100vh;
+  border: 1px solid red;
 `;
 
 const SectionTitle = styled.section`
