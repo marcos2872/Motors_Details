@@ -3,7 +3,16 @@ import { useParams } from 'react-router-dom';
 import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
 import mokApi from '../../services/mokApi';
-import { Body, Contents, ImageB, ImageBravia, MotorDetails, Text } from './motorStyled';
+import {
+  Body,
+  Contents,
+  ImageB,
+  ImageBravia,
+  ImageM,
+  ImagesMotor,
+  MotorDetails,
+  Text,
+} from './motorStyled';
 
 type motoType =
   | {
@@ -64,6 +73,12 @@ function Motor() {
         </MotorDetails>
         <ImageB>{motor?.images.length !== 1 && <ImageBravia src={motor?.images[1].url} />}</ImageB>
       </Contents>
+      <ImagesMotor>
+        {motor?.images.map(({ url }, idex) => {
+          if (idex !== 1) return <ImageM key={Math.random()} src={url} />;
+          return null;
+        })}
+      </ImagesMotor>
       <Footer />
     </Body>
   );

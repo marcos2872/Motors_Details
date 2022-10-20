@@ -14,7 +14,6 @@ const Contents = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 1px solid green;
 `;
 
 const MotorDetails = styled.section`
@@ -50,10 +49,16 @@ const Text = styled.p`
 
 const ImagesMotor = styled.section`
   background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 `;
 
 const ImageM = styled.img`
-  width: 200px;
+  width: 30%;
+  min-width: 300px;
+  border-radius: 10px;
 `;
 
 export { Body, Contents, MotorDetails, Text, ImageB, ImageBravia, ImagesMotor, ImageM };
