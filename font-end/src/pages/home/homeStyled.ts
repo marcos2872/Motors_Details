@@ -1,12 +1,10 @@
 import styled from '@emotion/styled';
 
 const Body = styled.body`
-  /* background-color: transparent; */
-  /* display: flex; */
-  /* min-width: 100vh; */
-  /* flex-direction: column; */
-  /* align-self: center; */
-  /* border: 1px solid red; */
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 `;
 
 const SectionTitle = styled.section`
@@ -16,6 +14,7 @@ const SectionTitle = styled.section`
   align-self: center;
   text-align: center;
   margin-top: 2%;
+  margin-bottom: 2%;
 `;
 
 const Title = styled.h1`
