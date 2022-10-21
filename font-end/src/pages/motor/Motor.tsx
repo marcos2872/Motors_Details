@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ReactPlayer from 'react-player';
 import { useParams } from 'react-router-dom';
 import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
@@ -12,6 +13,7 @@ import {
   ImagesMotor,
   MotorDetails,
   Text,
+  Video,
 } from './motorStyled';
 
 type motoType =
@@ -79,6 +81,7 @@ function Motor() {
           return null;
         })}
       </ImagesMotor>
+      <Video>{motor?.video && <ReactPlayer url={motor?.video} controls />}</Video>
       <Footer />
     </Body>
   );

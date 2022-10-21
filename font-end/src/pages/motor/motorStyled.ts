@@ -61,4 +61,10 @@ const ImageM = styled.img`
   border-radius: 10px;
 `;
 
-export { Body, Contents, MotorDetails, Text, ImageB, ImageBravia, ImagesMotor, ImageM };
+const Video = styled.section`
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+`;
+
+export { Body, Contents, MotorDetails, Text, ImageB, ImageBravia, ImagesMotor, ImageM, Video };
