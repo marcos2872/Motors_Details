@@ -32,6 +32,7 @@ const motorSchema = new mongoose.Schema({
   images: (type.a),
   video: (type.s),
   date: (type.d),
+  description: (type.s),
   
 });
 
