@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 const CardsContainer = styled.section`
   background-color: transparent;
   display: flex;
+  min-height: 90vh;
   flex-wrap: wrap;
   gap: 5vh;
   justify-content: center;
@@ -13,6 +14,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: space-around;
   width: 208px;
   height: 327px;

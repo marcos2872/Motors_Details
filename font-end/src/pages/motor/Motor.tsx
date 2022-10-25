@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player';
 import { useParams } from 'react-router-dom';
 import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
-import mokApi from '../../services/mokApi';
+import getMotorsById from '../../services/getMotorsById';
 import {
   Body,
   Contents,
@@ -33,6 +33,7 @@ type motoType =
         url: string;
       }[];
       video: string;
+      description: string;
     }
   | undefined;
 
@@ -50,12 +51,15 @@ function Motor() {
     'wire-length': '',
     images: [{ key: '', url: '' }],
     video: '',
+    description: '',
   });
   const { id } = useParams();
 
   useEffect(() => {
-    const respon = mokApi.find(({ _id }) => _id === id);
-    Setmotor(respon);
+    (async () => {
+      const respon = await getMotorsById(id || '');
+      Setmotor(respon);
+    })();
   }, [id]);
 
   return (
@@ -72,6 +76,7 @@ function Motor() {
           <Text>Fios paralelos: {motor?.['parallel-wire']}</Text>
           <Text>Comprimento: {motor?.['wire-length']}</Text>
           <Text>Voltas: {motor?.turns}</Text>
+          <Text>Descrição: {motor?.description}</Text>
         </MotorDetails>
         <ImageB>{motor?.images.length !== 1 && <ImageBravia src={motor?.images[1].url} />}</ImageB>
       </Contents>
