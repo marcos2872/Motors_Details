@@ -6,6 +6,9 @@ const Head = styled.header`
   align-items: center;
   height: 73px;
   gap: 10%;
+  position: fixed;
+  top: 0;
+  width: 100%;
 `;
 
 const Logo = styled.input`

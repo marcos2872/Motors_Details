@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 const CardsContainer = styled.section`
   background-color: transparent;
   display: flex;
-  min-height: 90vh;
+  /* min-height: 90vh; */
   flex-wrap: wrap;
   gap: 5vh;
   justify-content: center;

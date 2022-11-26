@@ -2,6 +2,7 @@ import React from 'react';
 import { DivIcons, Icon, Link, SectioFooter, Text } from './footerStyled';
 import github from '../../icons/github 1.png';
 import linkedin from '../../icons/linkedin 1.png';
+import youtube from '../../icons/youtube.png';
 
 function Footer() {
   return (
@@ -12,6 +13,9 @@ function Footer() {
         </Link>
         <Link href="https://www.linkedin.com/in/marcos-souza-a298a9209/" target="_blank">
           <Icon src={linkedin} />
+        </Link>
+        <Link href="https://www.youtube.com/channel/UCG3RUHMDhvvGFn60Vhk7Lhg" target="_blank">
+          <Icon src={youtube} />
         </Link>
       </DivIcons>
       <Text>Developed by Marcos Souza Brito</Text>

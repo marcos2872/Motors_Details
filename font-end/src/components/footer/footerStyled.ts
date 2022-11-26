@@ -10,6 +10,9 @@ const SectioFooter = styled.footer`
   padding-left: 2%;
   padding-right: 5%;
   margin-top: 2%;
+  position: fixed;
+  bottom: 0;
+  width: 95%;
 `;
 
 const DivIcons = styled.div`
