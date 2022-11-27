@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-const Head = styled.header`
+const Head = styled.div`
   background-color: #e5de97;
   display: flex;
   align-items: center;

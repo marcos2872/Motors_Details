@@ -86,7 +86,9 @@ function Motor() {
           return null;
         })}
       </ImagesMotor>
-      <Video>{motor?.video && <ReactPlayer url={motor?.video} controls />}</Video>
+      <Video>
+        {motor?.video && <ReactPlayer url={motor?.video} controls width="80%" height="600px" />}
+      </Video>
       <Footer />
     </Body>
   );

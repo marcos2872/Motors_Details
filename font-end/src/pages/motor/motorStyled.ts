@@ -7,6 +7,8 @@ const Body = styled.div`
   justify-items: center;
   min-height: 100vh;
   gap: 1.5rem;
+  padding-top: 80px;
+  padding-bottom: 70px;
 `;
 
 const Contents = styled.section`
