@@ -3,7 +3,7 @@ import Cards from '../../components/cards/Cards';
 import Drawer from '../../components/drawer/Drawer';
 import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
-import { Body, Title, SectionTitle } from './homeStyled';
+import { Body, Title, SectionTitle, Container, Data } from './homeStyled';
 import { Context } from '../../contexts';
 
 function Home() {
@@ -11,11 +11,15 @@ function Home() {
   return (
     <Body>
       <Header />
-      {drawer && <Drawer />}
-      <SectionTitle>
-        <Title>Motores</Title>
-      </SectionTitle>
-      <Cards />
+      <Container>
+        <Data>
+          <SectionTitle>
+            <Title>Motores</Title>
+          </SectionTitle>
+          <Cards />
+        </Data>
+        {drawer && <Drawer />}
+      </Container>
       <Footer />
     </Body>
   );

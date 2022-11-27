@@ -1,8 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-underscore-dangle */
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardsContainer, Image, Text } from './cardsStyled';
 import getMotors from '../../services/getAllMotors';
+import { Context } from '../../contexts';
 
 type motoType =
   | {
@@ -27,15 +29,30 @@ type motoType =
 function Cards() {
   const [motors, setMotors] = useState<motoType>([]);
   const navigate = useNavigate();
+  const { search } = useContext(Context);
+
+  const func = async () => {
+    const allMotors = await getMotors();
+
+    setMotors(allMotors);
+  };
 
   useEffect(() => {
-    const func = async () => {
-      const allMotors = await getMotors();
-
-      setMotors(allMotors);
-    };
     func();
   }, []);
+
+  useEffect(() => {
+    if (search) {
+      const motorsFilter = motors?.filter(({ model }) =>
+        model.toLowerCase().includes(search.toLowerCase()),
+      );
+
+      setMotors(motorsFilter);
+    }
+    if (!search) {
+      func();
+    }
+  }, [search]);
 
   return (
     <CardsContainer>
