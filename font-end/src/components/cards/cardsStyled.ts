@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 const CardsContainer = styled.section`
   background-color: transparent;
   display: flex;
-  /* min-height: 90vh; */
   flex-wrap: wrap;
   gap: 5vh;
   justify-content: center;
@@ -15,16 +14,16 @@ const Card = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  justify-content: space-around;
-  width: 208px;
+  /* justify-content: space-around; */
+  width: 250px;
   height: 327px;
   border-radius: 10px;
 `;
 
 const Image = styled.input`
   background-color: transparent;
-  width: 187px;
-  height: 151px;
+  width: 100%;
+  height: 200px;
   border-radius: 6px;
   cursor: pointer;
 `;
@@ -37,6 +36,7 @@ const Text = styled.p`
   font-size: 20px;
   line-height: 24px;
   cursor: pointer;
+  margin-top: 50px;
 `;
 
 export { CardsContainer, Card, Image, Text };

@@ -1,10 +1,15 @@
 import React from 'react';
-import { MenuContainer, Text } from './drawerStyled';
+import { Container, Link, MenuContainer, Text } from './drawerStyled';
 
 function Drawer() {
   return (
     <MenuContainer>
-      <Text>teste</Text>
+      <Container>
+        <Link href="http://www.bavaria-direct.co.za/scheme/calculator/" target="_blank">
+          Homebuilt Electric Motors
+        </Link>
+        <Text> </Text>
+      </Container>
     </MenuContainer>
   );
 }

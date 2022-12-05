@@ -56,17 +56,16 @@ function Cards() {
 
   return (
     <CardsContainer>
-      {motors?.length &&
-        motors?.map((motor) => (
-          <Card key={Math.random()}>
-            <Image
-              type="image"
-              src={motor.images[0].url}
-              onClick={() => navigate(`motor/${motor._id}`)}
-            />
-            <Text onClick={() => navigate(`motor/${motor._id}`)}>{motor.model}</Text>
-          </Card>
-        ))}
+      {motors?.map((motor) => (
+        <Card key={Math.random()}>
+          <Image
+            type="image"
+            src={motor.images[0].url}
+            onClick={() => navigate(`motor/${motor._id}`)}
+          />
+          <Text onClick={() => navigate(`motor/${motor._id}`)}>{motor.model}</Text>
+        </Card>
+      ))}
     </CardsContainer>
   );
 }
