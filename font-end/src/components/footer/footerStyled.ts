@@ -5,14 +5,13 @@ const SectioFooter = styled.footer`
   display: flex;
   align-items: center;
   height: 50px;
-  bottom: 0;
   justify-content: space-between;
   padding-left: 2%;
   padding-right: 5%;
   margin-top: 2%;
-  position: fixed;
+  position: relative;
   bottom: 0;
-  width: 95%;
+  width: 93%;
 `;
 
 const DivIcons = styled.div`

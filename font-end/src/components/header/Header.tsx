@@ -1,24 +1,36 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Head, Logo, Input, Menu } from './headerStyled';
+import { Head, Logo, Input } from './headerStyled';
 import logo from '../../icons/eletrico 1.png';
-import menuI from '../../icons/menu-aberto 1.png';
 import { Context } from '../../contexts';
 
 function Header() {
   const navigate = useNavigate();
+  const [input, setInput] = useState('');
 
-  const { search, setSearch, setDrawer } = useContext(Context);
+  const { setSearch } = useContext(Context);
+
+  const heardleKeyUp = (code: string) => {
+    if (code === 'Enter') {
+      if (input === '') {
+        setSearch('');
+        return;
+      }
+      setSearch(input);
+    }
+  };
 
   return (
     <Head>
       <Logo type="image" src={logo} onClick={() => navigate('/')} />
       <Input
         placeholder={`    Buscar por modelo`}
-        value={search}
-        onChange={({ target }) => setSearch(target.value)}
+        value={input}
+        onChange={({ target }) => setInput(target.value)}
+        onKeyUp={({ code }) => {
+          heardleKeyUp(code);
+        }}
       />
-      <Menu type="image" src={menuI} onClick={() => setDrawer((prev: any) => !prev)} />
     </Head>
   );
 }

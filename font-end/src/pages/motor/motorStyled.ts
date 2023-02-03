@@ -7,8 +7,6 @@ const Body = styled.div`
   justify-items: center;
   min-height: 100vh;
   gap: 1.5rem;
-  padding-top: 80px;
-  padding-bottom: 70px;
 `;
 
 const Contents = styled.section`
@@ -37,6 +35,7 @@ const ImageB = styled.section`
   background-color: transparent;
   width: 60%;
   min-width: 400px;
+  max-width: 900px;
   display: flex;
   justify-content: center;
 `;
@@ -58,8 +57,8 @@ const ImagesMotor = styled.section`
 `;
 
 const ImageM = styled.img`
-  width: 30%;
-  min-width: 300px;
+  width: 500px;
+  height: 400px;
   border-radius: 10px;
 `;
 

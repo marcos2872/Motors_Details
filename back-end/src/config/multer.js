@@ -49,7 +49,7 @@ module.exports = {
   dest: path.resolve(__dirname, '..', '..', 'temp', 'uploads'),
   storage: storageTypes[process.env.STORAGE],
   limits: {
-    fileSize: 8 * 1024 * 1024,
+    fileSize: 9 * 1024 * 1024,
   },
   fileFilter: (_req, file, cb) => {
     const allowedMines = [

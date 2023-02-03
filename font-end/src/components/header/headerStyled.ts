@@ -6,7 +6,7 @@ const Head = styled.div`
   align-items: center;
   height: 73px;
   gap: 10%;
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
 `;
@@ -25,6 +25,7 @@ const Input = styled.input`
   height: 33px;
   border-radius: 7px;
   border: none;
+  outline: 0;
   padding-left: 1%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `;

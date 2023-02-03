@@ -2,7 +2,7 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Card, CardsContainer, Image, Text } from './cardsStyled';
+import { Card, CardsContainer, Container, Image, SectionTitle, Text, Title } from './cardsStyled';
 import getMotors from '../../services/getAllMotors';
 import { Context } from '../../contexts';
 
@@ -55,18 +55,23 @@ function Cards() {
   }, [search]);
 
   return (
-    <CardsContainer>
-      {motors?.map((motor) => (
-        <Card key={Math.random()}>
-          <Image
-            type="image"
-            src={motor.images[0].url}
-            onClick={() => navigate(`motor/${motor._id}`)}
-          />
-          <Text onClick={() => navigate(`motor/${motor._id}`)}>{motor.model}</Text>
-        </Card>
-      ))}
-    </CardsContainer>
+    <Container>
+      <SectionTitle>
+        <Title>Motores</Title>
+      </SectionTitle>
+      <CardsContainer>
+        {motors?.map((motor) => (
+          <Card key={Math.random()}>
+            <Image
+              type="image"
+              src={motor.images[0].url}
+              onClick={() => navigate(`motor/${motor._id}`)}
+            />
+            <Text onClick={() => navigate(`motor/${motor._id}`)}>{motor.model}</Text>
+          </Card>
+        ))}
+      </CardsContainer>
+    </Container>
   );
 }
 
