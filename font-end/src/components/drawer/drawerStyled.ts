@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import devices from '../../styles/devices';
+
 export const MenuContainer = styled.nav`
   background-color: transparent;
   display: flex;
@@ -7,6 +9,16 @@ export const MenuContainer = styled.nav`
   align-items: center;
   width: 400px;
   gap: 5vh;
+
+  @media ${devices.laptop} {
+    position: fixed;
+    right: 0;
+    top: 80px;
+    margin-right: 10px;
+    background-color: rgba(235, 235, 235, 0.8);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+  }
 `;
 
 export const SectionTitle = styled.section`
@@ -19,6 +31,7 @@ export const SectionTitle = styled.section`
 `;
 
 export const Title = styled.h1`
+  background-color: transparent;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
   font-weight: 400;

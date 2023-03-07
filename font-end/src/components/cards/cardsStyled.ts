@@ -43,7 +43,7 @@ const Card = styled.li`
   justify-content: space-between;
   padding-bottom: 20px;
   text-align: center;
-  width: 300px;
+  width: 320px;
   height: 330px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px gray;
