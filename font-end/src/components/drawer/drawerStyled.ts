@@ -11,6 +11,7 @@ export const MenuContainer = styled.nav`
   gap: 5vh;
 
   @media ${devices.laptop} {
+    display: none;
     position: fixed;
     right: 0;
     top: 80px;

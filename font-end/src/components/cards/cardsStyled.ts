@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import devices from '../../styles/devices';
 
 const Container = styled.div`
   background-color: transparent;
@@ -7,15 +8,21 @@ const Container = styled.div`
   width: 700px;
   gap: 5vh;
   align-self: start;
+
+  @media ${devices.laptop} {
+    width: 100%;
+    /* height: 300px; */
+  }
 `;
 
 const CardsContainer = styled.ul`
   background-color: transparent;
   display: flex;
   flex-wrap: wrap;
-  width: 700px;
+  width: 100%;
   gap: 5vh;
-  align-self: start;
+  align-self: center;
+  justify-content: center;
 `;
 
 const SectionTitle = styled.section`
@@ -50,6 +57,11 @@ const Card = styled.li`
   :hover {
     scale: 1.05;
     transition-duration: 300ms;
+  }
+
+  @media ${devices.laptop} {
+    width: 250px;
+    height: 300px;
   }
 `;
 
