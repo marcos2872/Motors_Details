@@ -2,6 +2,10 @@ import styled from '@emotion/styled';
 import { AiOutlineMenu } from 'react-icons/ai';
 import devices from '../../styles/devices';
 
+type drawerType = {
+  pathLocal: string;
+};
+
 const Head = styled.div`
   background-color: #e5de97;
   display: flex;
@@ -60,16 +64,16 @@ const IconBusca = styled.img`
 `;
 
 const Menu = styled(AiOutlineMenu)`
-  display: none;
+  display: ${({ pathLocal }: drawerType) => (pathLocal.includes('motor') ? 'flex' : 'none')};
+  background-color: transparent;
+  width: 39px;
+  height: 30px;
+  margin-right: 2.5%;
+  position: absolute;
+  right: 0;
 
   @media ${devices.laptop} {
     display: flex;
-    background-color: transparent;
-    width: 39px;
-    height: 30px;
-    margin-right: 2.5%;
-    position: absolute;
-    right: 0;
   }
 `;
 

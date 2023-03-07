@@ -32,6 +32,7 @@ function Header() {
         }}
       />
       <Menu
+        pathLocal={window.location.pathname}
         onClick={() => {
           setDrawer((prev: boolean) => !prev);
         }}

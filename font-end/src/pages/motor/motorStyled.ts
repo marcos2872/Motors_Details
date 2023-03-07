@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import devices from '../../styles/devices';
 
 const Body = styled.div`
   background-color: transparent;
@@ -19,10 +20,18 @@ const Contents = styled.section`
 const MotorDetails = styled.section`
   background-color: transparent;
   width: 30%;
-  min-width: 300px;
+  /* min-width: 300px; */
   padding: 1rem;
   padding-top: 2rem;
   gap: 1rem;
+
+  @media ${devices.laptop} {
+    width: 90%;
+  }
+
+  @media ${devices.mobileL} {
+    width: 100%;
+  }
 `;
 
 const ImageBravia = styled.img`
@@ -34,10 +43,18 @@ const ImageBravia = styled.img`
 const ImageB = styled.section`
   background-color: transparent;
   width: 60%;
-  min-width: 400px;
-  max-width: 900px;
   display: flex;
   justify-content: center;
+
+  @media ${devices.laptop} {
+    width: 550px;
+    height: 500px;
+  }
+
+  @media ${devices.mobileL} {
+    width: 100%;
+    height: 400px;
+  }
 `;
 
 const Text = styled.p`
@@ -54,12 +71,23 @@ const ImagesMotor = styled.section`
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  width: 100%;
 `;
 
 const ImageM = styled.img`
-  width: 500px;
-  height: 400px;
+  width: 550px;
+  height: 500px;
   border-radius: 10px;
+
+  @media ${devices.laptop} {
+    width: 550px;
+    height: 500px;
+  }
+
+  @media ${devices.mobileL} {
+    width: 350px;
+    height: 300px;
+  }
 `;
 
 const Video = styled.section`

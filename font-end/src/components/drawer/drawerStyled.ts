@@ -4,11 +4,12 @@ import devices from '../../styles/devices';
 
 type drawerType = {
   drawer: boolean;
+  local: string;
 };
 
 export const MenuContainer = styled.nav`
   background-color: transparent;
-  display: flex;
+  display: ${(props: drawerType) => (props.local.includes('motor') ? 'none' : 'flex')};
   flex-direction: column;
   align-items: center;
   width: 400px;
@@ -24,6 +25,10 @@ export const MenuContainer = styled.nav`
     background-color: rgba(235, 235, 235, 0.8);
     border-radius: 10px;
     box-shadow: 5px 5px 10px gray;
+  }
+
+  @media ${devices.mobileL} {
+    width: 300px;
   }
 `;
 

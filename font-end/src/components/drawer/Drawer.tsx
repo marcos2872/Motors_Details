@@ -4,14 +4,13 @@ import { Container, Link, MenuContainer, SectionTitle, Text, Title } from './dra
 
 function Drawer() {
   const { drawer } = useContext(Context);
-
   return (
-    <MenuContainer drawer={drawer}>
+    <MenuContainer drawer={drawer} local={window.location.pathname}>
       <SectionTitle>
         <Title>Links</Title>
       </SectionTitle>
       <Container>
-        <Text>Site para ver enrolamento de motor:</Text>
+        <Text>Site para ver enrolamento de motor</Text>
         <Link href="http://www.bavaria-direct.co.za/scheme/calculator/" target="_blank">
           Homebuilt Electric Motors
         </Link>

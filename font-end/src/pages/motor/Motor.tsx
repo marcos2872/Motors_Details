@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 import { useParams } from 'react-router-dom';
+import Drawer from '../../components/drawer/Drawer';
 import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
 import getMotorsById from '../../services/getMotorsById';
@@ -65,6 +66,7 @@ function Motor() {
   return (
     <Body>
       <Header />
+      <Drawer />
       <Contents>
         <MotorDetails>
           <Text>Modelo: {motor?.model}</Text>
@@ -87,7 +89,7 @@ function Motor() {
         })}
       </ImagesMotor>
       <Video>
-        {motor?.video && <ReactPlayer url={motor?.video} controls width="80%" height="600px" />}
+        {motor?.video && <ReactPlayer url={motor?.video} controls width="90%" height="600px" />}
       </Video>
       <Footer />
     </Body>
