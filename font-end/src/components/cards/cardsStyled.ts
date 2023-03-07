@@ -60,7 +60,7 @@ const Card = styled.li`
   }
 
   @media ${devices.laptop} {
-    width: 250px;
+    width: 290px;
     height: 300px;
   }
 `;

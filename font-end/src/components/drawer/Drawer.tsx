@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from '../../contexts';
 import { Container, Link, MenuContainer, SectionTitle, Text, Title } from './drawerStyled';
 
 function Drawer() {
+  const { drawer } = useContext(Context);
+
   return (
-    <MenuContainer>
+    <MenuContainer drawer={drawer}>
       <SectionTitle>
         <Title>Links</Title>
       </SectionTitle>

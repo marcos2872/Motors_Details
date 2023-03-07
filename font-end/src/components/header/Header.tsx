@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Head, Logo, Input } from './headerStyled';
+import { Head, Logo, Input, Menu } from './headerStyled';
 import logo from '../../icons/eletrico 1.png';
 import { Context } from '../../contexts';
 
@@ -8,7 +8,7 @@ function Header() {
   const navigate = useNavigate();
   const [input, setInput] = useState('');
 
-  const { setSearch } = useContext(Context);
+  const { setSearch, setDrawer } = useContext(Context);
 
   const heardleKeyUp = (code: string) => {
     if (code === 'Enter') {
@@ -29,6 +29,11 @@ function Header() {
         onChange={({ target }) => setInput(target.value)}
         onKeyUp={({ code }) => {
           heardleKeyUp(code);
+        }}
+      />
+      <Menu
+        onClick={() => {
+          setDrawer((prev: boolean) => !prev);
         }}
       />
     </Head>

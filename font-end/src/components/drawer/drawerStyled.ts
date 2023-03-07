@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 import devices from '../../styles/devices';
 
+type drawerType = {
+  drawer: boolean;
+};
+
 export const MenuContainer = styled.nav`
   background-color: transparent;
   display: flex;
@@ -9,9 +13,10 @@ export const MenuContainer = styled.nav`
   align-items: center;
   width: 400px;
   gap: 5vh;
+  height: 400px;
 
   @media ${devices.laptop} {
-    display: none;
+    display: ${(props: drawerType) => (props.drawer ? 'flex' : 'none')};
     position: fixed;
     right: 0;
     top: 80px;
