@@ -42,7 +42,7 @@ const ImageBravia = styled.img`
 
 const ImageB = styled.section`
   background-color: transparent;
-  width: 60%;
+  width: 40%;
   display: flex;
   justify-content: center;
 
